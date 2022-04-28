@@ -1,0 +1,17 @@
+body{
+    max-width: 90%;
+    width: 100%;
+    margin: 25px auto;
+}
+
+main{
+    background-color: cadetblue;
+}
+
+.container {
+  margin: 20px 0 20px 0;
+}
+
+.form-control{
+    width: 50%;
+}
