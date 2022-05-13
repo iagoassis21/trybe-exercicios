@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+button{
+    margin: 5px;
+}
+
+p{
+    margin: 5px;
+}
