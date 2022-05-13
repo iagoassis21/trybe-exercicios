@@ -1,11 +1,22 @@
 body{
-    max-width: 90%;
+    max-width: 95%;
     width: 100%;
     margin: 25px auto;
 }
 
 main{
     background-color: cadetblue;
+    border-radius: 1%;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.centralize{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .container {
