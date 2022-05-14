@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Calculadora</title>
+</head>
+<body>
+  <p>Informe dois números para realizar a soma:</p>
+  <label for='value1'>Valor 1:</label>
+  <input type='text' id='value1'>
+  <label for='value2'>Valor 2:</label>
+  <input type='text' id='value2'>
+  <button id='button'>Somar</button>
+  <p id='result'></p>
+  <script>
+
+
+    const checkNumbers = (num1, num2) => {
+      if( num1.length == 0 || num2.length == 0 ){
+     throw new Error (document.getElementById('result').innerHTML = 'Você não pode executar a soma somente com um valor!');
+      }
+      if( isNaN(num1) || isNaN(num2)){
+        throw new Error (document.getElementById('result').innerHTML = 'Um, ou dois dos seus valores não são numéricos!');
+      }
+
+    };
+ 
+    function sum() {
+      const value1 = document.getElementById('value1').value;
+      const value2 = document.getElementById('value2').value;
+        try {
+          checkNumbers(value1, value2);
+          const result = parseInt(value1) + parseInt(value2);
+          document.getElementById('result').innerHTML = `Resultado: ${result}`;
+          
+          }
+            catch (error){
+              document.getElementById('result').innerHTML = error;
+            }
+            finally{
+              document.getElementById('value1').value = '';
+              document.getElementById('value2').value = '';
+            }
+    }
+
+    window.onload = () => {
+      const button = document.getElementById('button');
+      button.addEventListener('click', sum);
+    }
+ 
+  </script>
+</body>
+</html>
