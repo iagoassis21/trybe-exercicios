@@ -18,12 +18,12 @@
     </header>
         <main> 
         <form action="" method="post">
-            <div>
-                <div class="container">
+            <div class="row">
+                <div class="col">
                     <label for="input-name" class="form-label"> Nome: </label>
                     <input class="form-control" minlength="10" maxlength="40" type="text" name="texto" placeholder="Digite seu nome" required id="input-name">
                 </div>
-                <div class="container">
+                <div class="col">
                     <label for="input-email" class="form-label"> Email: </label>
                     <input class="form-control" minlength="10" maxlength="40" type="text" name="texto" placeholder="Digite seu Email" required id="input-email">
                 </div>
@@ -32,26 +32,26 @@
         <div class="container">
             <p class="lead">Escolha a modalidade da viagem</p>
                     <div class="form-check">
-                        <label class="form-label" for="hub1">Cidade</label> 
+                        <label class="form-check-label" for="hub1">Cidade</label> 
                         <input class="form-check-input" type="radio" id="hub1" name="hub" id="hub1">
                     </div>
                     <div class="form-check">
-                        <label class="form-label" for="hub2"> Campo</label>
+                        <label class="form-check-label" for="hub2"> Campo</label>
                         <input class="form-check-input" type="radio" id="hub2" name="hub" id="hub2">
                     </div>
                     <div class="form-check">
-                        <label class="form-label" for="hub3"> Praia</label>
+                        <label class="form-check-label" for="hub3"> Praia</label>
                         <input class="form-check-input" type="radio" id="hub3" name="hub" id="hub3">
                     </div>
                     <div class="form-check">
-                        <label class="form-label" for="hub4"> Montanhas</label>
+                        <label class="form-check-label" for="hub4"> Montanhas</label>
                         <input class="form-check-input" type="radio" id="hub4" name="hub" id="hub4">
                 </div>
         </div>
 
         <div class="container">
             <p class="lead">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
-            <textarea maxlength="500" name="" id="" cols="30" rows="10"> </textarea>
+            <textarea class="form-control" maxlength="500" name="" id="" cols="30" rows="10"> </textarea>
         </div>
 
         <div class="container">
@@ -60,8 +60,14 @@
         </div>
 
         <div>
-        <input type="checkbox" name="" id="">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? <br>
-        <input type="checkbox" name="" id="">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="" id="oportunitiesMail">
+                <label class="form-check-label" for="oportunitiesMail">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" required type="checkbox" name="" id="useTerms">
+                <label class="form-check-label" for="useTerms">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+            </div>
         </div>
 
         <button class="btn btn-success" type="submit"> Enviar</button>
